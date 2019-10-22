@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hphk">Happy Hacking!</h1>
+    <h2 id="visitor"></h2>
+    <div>
+        <a href="#" id="who-button">Who said what?</a>
+        <span id="answerer"></span>
+    </div>
+    <div>
+        <span id="counter">0</span>
+        <button id="counter-button">PLUS</button>
+        <button id="counter-button2">MINUS</button>
+        <button id="counter-button3">RESET</button>
+    </div>
+
+    <script>
+        // alert('귀찮은 알림 창');
+        // const visitor = prompt('who are you?');
+        // const whoVisit = document.querySelector('#visitor');
+        // if(visitor === '이재훈') {
+        //     whoVisit.innerHTML = visitor + '님 어서오세요';
+        // } else {
+        //     whoVisit.innerHTML = 'ㄲㅈ';
+        // }
+        const whoButton = document.querySelector('#who-button');
+        whoButton.addEventListener('click',function() {
+            document.querySelector('#answerer').innerHTML = visitor;
+        })
+
+        let number = 0;
+        const counter = document.querySelector('#counter');
+        const counterButton = document.querySelector('#counter-button');
+        const counterButton2 = document.querySelector('#counter-button2');
+        const counterButton3 = document.querySelector('#counter-button3');
+        counterButton.addEventListener('click', function() {
+            console.log('hi');
+            console.log(counter.innerHTML++);
+        })
+        counterButton2.addEventListener('click', function() {
+            console.log('bye');
+            console.log(counter.innerHTML--);
+        })
+        counterButton3.addEventListener('click', function() {
+            console.log('reset');
+            console.log(counter);
+            counter.innerHTML = number;
+        })
+
+    </script>
+
+</body>
+</html>
