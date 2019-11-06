@@ -57,10 +57,10 @@ async function read() {
   console.log(courses);
   const courses2 = await Course.find({ price: { $gt: 15 }, tags: { $in: ["nodejs", "express"] } }, { name: 1, tags: 1, price: 1 });
   const courses3 = await Course.find()
-  .where('isPublished').equals(true)
-  .where('tags').in(['nodejs','express'])
-  .where('price').gt(15)
-  .sort('-name')
-  .select('name tags price');
+    .where('isPublished').equals(true)
+    .where('tags').in(['nodejs', 'express'])
+    .where('price').gt(15)
+    .sort('-name')
+    .select('name tags price');
 }
 read();
